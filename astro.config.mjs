@@ -1,5 +1,6 @@
-import { defineConfig } from "astro/config";
+import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: "https://astro-smallworld.pages.dev/",
+  site: 'https://andre-vincent.github.io',
+  base: '/astro-blades', // Le nom exact de votre dépôt GitHub
 });
