@@ -12,6 +12,7 @@
     "format": "prettier './src/**/*' --write"
   },
   "dependencies": {
+    "@anyblades/blades": "^2.4.9",
     "@astrojs/check": "^0.9.9",
     "@astrojs/rss": "^4.0.19",
     "@picocss/pico": "^2.1.1",
