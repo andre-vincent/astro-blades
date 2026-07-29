@@ -1,0 +1,79 @@
+---
+// src/components/ThemeToggle.astro
+---
+
+<button id="theme-toggle" class="outline" aria-label="Changer le mode de couleur">
+  <!-- Icône Soleil (S'affiche en mode clair) -->
+  <svg class="sun-icon" xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2"></path>
+    <path d="M12 20v2"></path>
+    <path d="m4.93 4.93 1.41 1.41"></path>
+    <path d="m17.66 17.66 1.41 1.41"></path>
+    <path d="M2 12h2"></path>
+    <path d="M20 12h2"></path>
+    <path d="m6.34 17.66-1.41 1.41"></path>
+    <path d="m19.07 4.93-1.41 1.41"></path>
+  </svg>
+
+  <!-- Icône Lune (S'affiche en mode sombre) -->
+  <svg class="moon-icon" xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+  </svg>
+</button>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+
+  function updateButtonLabel(theme: string) {
+    toggleBtn?.setAttribute('aria-label', `Passer au mode ${theme === 'dark' ? 'clair' : 'sombre'}`);
+  }
+
+  toggleBtn?.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateButtonLabel(newTheme);
+  });
+
+  const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  updateButtonLabel(activeTheme);
+</script>
+
+<style>
+  /* Gestion de l'affichage des SVG selon le thème Blades.css */
+  :root[data-theme="light"] .sun-icon { display: block; }
+  :root[data-theme="light"] .moon-icon { display: none; }
+  
+  :root[data-theme="dark"] .sun-icon { display: none; }
+  :root[data-theme="dark"] .moon-icon { display: block; }
+
+  /* Style du bouton bouton adapté pour de l'interactivité */
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: 1px solid var(--primary-color, #ccc);
+    background: transparent;
+    border-radius: 6px;
+    color: var(--primary-color); /* Utilise la couleur principale de Blades */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+
+  button:hover {
+    background-color: var(--background-color-hover, rgba(0, 0, 0, 0.05));
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+
+  /* Assure que le SVG hérite proprement de la couleur du bouton */
+  svg {
+    stroke: currentColor;
+  }
+</style>
