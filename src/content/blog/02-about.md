@@ -1,71 +1,71 @@
 ---
-title: About this template
-description: This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements.
+title: À propos de ce modèle
+description: Cette fiche de référence Markdown donne un aperçu rapide de tous les éléments de la syntaxe Markdown.
 pubDate: 2025-01-17
 tags:
   - astro
   - template
 ---
 
-This template is based on a few key principles for my own site:
+Ce modèle repose sur quelques principes clés pour mon propre site :
 
-- I wanted a basic website with a single-author blog.
-- The website should incorporate accessible and usable elements.
-- Complex systems should be avoided in favor of simpler ones.
-- I should be able to easily understand what I see.
+- Je voulais un site Web basique avec un blog à auteur unique.
+- Le site devait inclure des éléments accessibles et utilisables.
+- Les systèmes complexes devaient être évités au profit de solutions plus simples.
+- Je devais pouvoir comprendre facilement ce que je vois.
 
-The result is an Astro template that heavily limits the use of CSS classes, and maximizes the use of semantic HTML.
+Le résultat est un modèle Astro qui limite fortement l'utilisation des classes CSS et qui maximise l'utilisation du HTML sémantique.
 
-## Features
+## Fonctionnalités
 
 ### Pico CSS
 
-The template uses Pico CSS to benefit from good-looking default settings with responsive layouts. It needs almost no classes to work well, which is the goal.
+Le modèle utilise Pico CSS pour bénéficier de paramètres par défaut agréables avec des mises en page réactives. Il a besoin de presque aucune classe pour bien fonctionner, ce qui est l'objectif.
 
-I use the SASS version of Pico CSS to remove unnecessary styles and reduce the final CSS size.
+J'utilise la version SASS de Pico CSS pour supprimer les styles inutiles et réduire la taille finale du CSS.
 
-### Semantic HTML
+### HTML sémantique
 
-This template tries to maximize the use of semantic HTML tags over generic ones like `<div>`. Semantic HTML has significant benefits:
+Ce modèle cherche à maximiser l'utilisation des balises HTML sémantiques plutôt que des éléments génériques comme `<div>`. Le HTML sémantique présente des avantages importants :
 
-1. HTML source is easier to read and write.
-2. Semantic HTML is recommended over ARIA attributes for accessibility.
-3. Semantic styling works well with Pico CSS.
+1. Le code source HTML est plus facile à lire et à écrire.
+2. Le HTML sémantique est recommandé par rapport aux attributs ARIA pour l'accessibilité.
+3. Le style sémantique fonctionne bien avec Pico CSS.
 
-### Static output
+### Résultat statique
 
-The template tries to not go beyond static HTML. No client JavaScript, no cookies.
+Le modèle essaie de ne pas aller au-delà du HTML statique. Pas de JavaScript côté client, pas de cookies.
 
-### Limited NPM packages
+### Packages NPM limités
 
-The template limits the number of NPM packages to those I found useful, such as:
+Le modèle limite le nombre de packages NPM à ceux que j'ai trouvés utiles, tels que :
 
-- Prettier, for code readability
-- SASS and Pico CSS, to avoid having to think about CSS
-- The Astro RSS integration
+- Prettier, pour la lisibilité du code
+- SASS et Pico CSS, pour éviter de se préoccuper du CSS
+- L'intégration RSS d'Astro
 
-### Quality-of-life features
+### Fonctionnalités de confort
 
-The template has a few features that seemed like a good idea, even though they're not as minimal:
+Le modèle inclut quelques fonctionnalités qui semblaient une bonne idée, même si elles ne sont pas aussi minimales :
 
-- A styled RSS feed
-- An Open Graph image for social networks
-- Post tags and tag pages
-- A post and page template
-- Absolute imports in `tsconfig.json`
+- Un flux RSS stylisé
+- Une image Open Graph pour les réseaux sociaux
+- Des étiquettes de publication et des pages de tags
+- Un modèle de publication et de page
+- Des imports absolus dans `tsconfig.json`
 
-## Future developments
+## Développements futurs
 
-There are more things I would like to implement:
+Il y a d'autres choses que j'aimerais implémenter :
 
-- [] Figure out where to put the Tags page.
-- [] Add a `pages` content collection.
-- [] Add a navigation link component
-- [] Organize Astro components better
-- [] Integrate icons
-- [] More...?
+- [] Déterminer où placer la page des tags.
+- [] Ajouter une collection de contenu `pages`.
+- [] Ajouter un composant de lien de navigation
+- [] Mieux organiser les composants Astro
+- [] Intégrer des icônes
+- [] Plus... ?
 
-## Acknowledgments
+## Remerciements
 
-- The [Astro Pico](https://github.com/san-ghun/astro-pico) template, for introducing me to Pico CSS.
-- The [Astronaut](https://github.com/stevefrenzel/astro-naut) template, for helping me learn better responsiveness principles.
+- Le modèle [Astro Pico](https://github.com/san-ghun/astro-pico), pour m'avoir fait découvrir Pico CSS.
+- Le modèle [Astronaut](https://github.com/stevefrenzel/astro-naut), pour m'avoir aidé à apprendre de meilleurs principes de réactivité.
