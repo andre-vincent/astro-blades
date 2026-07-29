@@ -1,19 +1,19 @@
 ---
-title: Markdown Cheat Sheet
-description: This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements.
+title: Fiche de référence Markdown
+description: Cette fiche de référence Markdown donne un aperçu rapide de tous les éléments de la syntaxe Markdown.
 pubDate: 2025-01-18
 tags:
   - astro
   - markdown
 ---
 
-This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax/) and [extended syntax](https://www.markdownguide.org/extended-syntax/).
+Cette fiche de référence Markdown donne un aperçu rapide de tous les éléments de la syntaxe Markdown. Elle ne peut pas couvrir tous les cas particuliers, donc si vous avez besoin de plus d'informations sur l'un de ces éléments, reportez-vous aux guides de référence pour la [syntaxe de base](https://www.markdownguide.org/basic-syntax/) et la [syntaxe étendue](https://www.markdownguide.org/extended-syntax/).
 
-## Basic Syntax
+## Syntaxe de base
 
-These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
+Ce sont les éléments décrits dans le document de conception original de John Gruber. Toutes les applications Markdown prennent en charge ces éléments.
 
-### Heading
+### Titre
 
 # H1
 
@@ -21,25 +21,25 @@ These are the elements outlined in John Gruber’s original design document. All
 
 ### H3
 
-### Bold
+### Gras
 
 **bold text**
 
-### Italic
+### Italique
 
 _italicized text_
 
-### Blockquote
+### Bloc de citation
 
 > blockquote
 
-### Ordered List
+### Liste ordonnée
 
 1. First item
 2. Second item
 3. Third item
 
-### Unordered List
+### Liste non ordonnée
 
 - First item
 - Second item
@@ -49,11 +49,11 @@ _italicized text_
 
 `code`
 
-### Horizontal Rule
+### Règle horizontale
 
 ---
 
-### Link
+### Lien
 
 [Markdown Guide](https://www.markdownguide.org)
 
@@ -61,18 +61,18 @@ _italicized text_
 
 ![alt text](https://www.markdownguide.org/assets/images/tux.png)
 
-## Extended Syntax
+## Syntaxe étendue
 
-These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
+Ces éléments étendent la syntaxe de base en ajoutant des fonctionnalités supplémentaires. Toutes les applications Markdown ne prennent pas en charge ces éléments.
 
-### Table
+### Tableau
 
-| Syntax    | Description |
+| Syntaxe   | Description |
 | --------- | ----------- |
 | Header    | Title       |
 | Paragraph | Text        |
 
-### Fenced Code Block
+### Bloc de code encadré
 
 ```
 {
@@ -82,17 +82,17 @@ These elements extend the basic syntax by adding additional features. Not all Ma
 }
 ```
 
-### Footnote
+### Note de bas de page
 
-Here's a sentence with a footnote. [^1]
+Voici une phrase avec une note de bas de page. [^1]
 
-[^1]: This is the footnote.
+[^1]: Ceci est la note de bas de page.
 
-### Strikethrough
+### Barré
 
 ~~The world is flat.~~
 
-### Task List
+### Liste de tâches
 
 - [x] Write the press release
 - [ ] Update the website
