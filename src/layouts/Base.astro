@@ -1,7 +1,4 @@
-// Supprimez l'import de main.scss ou pico
-// import "@styles/main.scss";
-
-// Ajoutez l'import de Blades.css
+---
 import '@anyblades/blades/css/blades.css';
 
 import { siteConfig } from "~/settings";
@@ -21,6 +18,20 @@ const { title, description, ogType = "website" } = Astro.props;
 
 <!doctype html>
 <html lang={siteConfig.lang}>
+  <head>
+    <!-- Script d'initialisation anti-flash blanc pour Blades.css -->
+    <script is:inline>
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    </script>
+  </head>
+
   <PageHead
     title={title ? `${title} | ${siteConfig.title}` : siteConfig.title}
     description={description ? description : siteConfig.description}
@@ -35,6 +46,7 @@ const { title, description, ogType = "website" } = Astro.props;
     <PageFooter />
   </body>
 </html>
+
 {/* CSS required to keep footer at the bottom of the page */}
 <style>
   .container {
@@ -47,7 +59,8 @@ const { title, description, ogType = "website" } = Astro.props;
     left: 0;
     transform: translateY(-100%);
     padding: 0.5rem 1rem;
-    background: var(--pico-background-color);
+    /* Ajusté pour utiliser la variable de fond de Blades.css au lieu de Pico */
+    background: var(--background-color); 
     z-index: 100;
   }
   .skip-link:focus {
