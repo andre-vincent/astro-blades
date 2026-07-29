@@ -1,5 +1,6 @@
 ---
 import NavLink from "./NavLink.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <header>
@@ -15,6 +16,7 @@ import NavLink from "./NavLink.astro";
       <li><NavLink path="about">À propos</NavLink></li>
       <li><NavLink path="blog">Carnet</NavLink></li>
       {/* Add other navbar entries here */}
+      <li><ThemeToggle /></li>
     </ul>
   </nav>
 </header>
